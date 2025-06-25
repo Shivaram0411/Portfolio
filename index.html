@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Shivaram Emmidi | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding-top: 2rem;
+        }
+
+        .project-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+            opacity: 0;
+            transform: translateY(60px);
+            transition: transform 1.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 1.5s ease;
+        }
+
+        .project-card.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#work">Work</a></li>
+
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="documents/resume.pdf" download class="resume-btn">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Hi, I'm Shivaram Emmidi</h1>
+            <p>A Tech Wizard</p>
+            <div class="social-buttons" style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="https://github.com/yourgithub" target="_blank" class="social-btn">
+                    <img src="images/github-icon.png" alt="GitHub" width="32" height="32">
+                </a>
+                <a href="https://linkedin.com/in/yourlinkedin" target="_blank" class="social-btn">
+                    <img src="images/linkedin-icon.png" alt="LinkedIn" width="32" height="32">
+                </a>
+            </div>
+        </section>
+
+
+       <section id="experience" class="animated-experience-section">
+  <h2 class="section-header">Experience</h2>
+  <div class="timeline-container">
+    <div class="timeline-line"></div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Lead Developer AI/ML</h3>
+        <h4>Western Michigan University · Self-employed</h4>
+        <p><strong>Sep 2024 – Present</strong> · Kalamazoo, MI (On-site)</p>
+        <p>Leading AI/ML research and development for university projects including LLMs, data pipelines, and student projects.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Web Application Developer</h3>
+        <h4>Vignan Institute of Technology and Science · Freelance</h4>
+        <p><strong>Jun 2022 – Mar 2023</strong> · Hyderabad, Telangana (On-site)</p>
+        <p>Designed and built a full-stack web platform for IT department content management and course scheduling.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Software Engineer Intern</h3>
+        <h4>GeExpress Logistics · Internship</h4>
+        <p><strong>May 2021 – Jul 2021</strong> · Hyderabad, Telangana (Remote)</p>
+        <p>Worked on logistics data pipelines and automated reporting dashboards for internal performance analytics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .timeline-container {
+    position: relative;
+    padding-left: 30px;
+    margin-top: 3rem;
+    max-width: 1000px;
+    margin-inline: auto;
+  }
+
+  .timeline-line {
+    position: absolute;
+    left: 18px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #0071e3, transparent);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+    animation: fadeSlideIn 1s ease forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .timeline-item:nth-child(1) { animation-delay: 0.3s; }
+  .timeline-item:nth-child(2) { animation-delay: 0.5s; }
+  .timeline-item:nth-child(3) { animation-delay: 0.7s; }
+
+  .timeline-dot {
+    position: absolute;
+    left: -2px;
+    top: 0.2rem;
+    width: 16px;
+    height: 16px;
+    background-color: #0071e3;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,113,227,0.4);
+  }
+
+  .timeline-content {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  }
+
+  .timeline-content h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    color: #1d1d1f;
+  }
+
+  .timeline-content h4 {
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+    color: #515154;
+  }
+
+  .timeline-content p {
+    font-size: 0.95rem;
+    color: #444;
+  }
+
+  @keyframes fadeSlideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+
+        <section id="work">
+            <h2 class="section-header">My Work</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="images/project1.png" alt="Project 1" />
+                    <div class="project-card-content">
+                        <h3>Loan Eligibility Predictor</h3>
+                        <p>ML model built with Flask to predict loan approvals. Frontend + Backend integrated.</p>
+                        <a href="https://github.com/Shivaram0411/Loan-Eligibility-Predictor">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/project2.png" alt="AI Real Estate" />
+                    <div class="project-card-content">
+                        <h3>AI-Driven Real Estate Platform</h3>
+                        <p>ML, NLP & Computer Vision system for property valuation, trend analysis, and tenant management.</p>
+                        <a href="https://github.com/Shivaram0411/AI-Driven-Real-Estate-Platform">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/project3.jpg" alt="Healthcare Chatbot" />
+                    <div class="project-card-content">
+                        <h3>Healthcare Chatbot</h3>
+                        <p>Disease prediction chatbot using SVM, dimensionality reduction, and feature engineering.</p>
+                        <a href="https://github.com/Shivaram0411/Healthcare_chatbot">View Project</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="images/project4.png" alt="Facial Recognition" />
+                    <div class="project-card-content">
+                        <h3>Facial Recognition for Crime Detection</h3>
+                        <p>Real-time face recognition with OpenCV, Dlib, and AWS-secured cloud storage.</p>
+                        <a href="https://github.com/Shivaram0411/Facial-Recognition-for-Crime-Detection">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="education" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: #f8f9fa; padding: 4rem 1rem;">
+    <h2 class="section-header">Education</h2>
+    <div class="flip-container">
+        <div class="flip-card">
+            <div class="flip-inner">
+                <div class="flip-front">
+                    <h3>1/2</h3>
+                    <p>Master of Science in Computer Science</p>
+                </div>
+                <div class="flip-back">
+                    <h3>Western Michigan University</h3>
+                    <p>2023 – 2025 </p>
+                    <p>CGPA: 3.6/4</p>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-inner">
+                <div class="flip-front">
+                    <h3>2/2</h3>
+                    <p>Bachelor of Technology in Information Technology</p>
+                </div>
+                <div class="flip-back">
+                    <h3>Vignan Institute of Technology & Science Hyderabad</h3>
+                    <p>2019 – 2023</p>
+                    <p>GPA: 7.75/10</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<style>
+    .flip-container {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+    }
+    .flip-card {
+        background: transparent;
+        width: 260px;
+        height: 180px;
+        perspective: 1000px;
+    }
+    .flip-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+    .flip-card:hover .flip-inner {
+        transform: rotateY(180deg);
+    }
+    .flip-front, .flip-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+    }
+    .flip-front {
+        background-color: #0071e3;
+        color: white;
+    }
+    .flip-back {
+        background-color: #f0f0f0;
+        color: #333;
+        transform: rotateY(180deg);
+    }
+</style>
+
+<style>
+    .orbit-container {
+        position: relative;
+        width: 100%;
+        max-width: 500px;
+        height: 500px;
+        margin: 4rem auto;
+    }
+    .center-planet {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100px;
+        height: 100px;
+        background: #0071e3;
+        border-radius: 50%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        box-shadow: 0 0 15px rgba(0,113,227,0.5);
+        z-index: 2;
+    }
+    .orbit {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%, -50%);
+        border: 1px dashed rgba(0, 113, 227, 0.4);
+        border-radius: 50%;
+        animation: rotate 20s linear infinite;
+    }
+    .orbiting-node {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70px;
+        height: 70px;
+        background: #f8f9fa;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.3s;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .orbiting-node:hover {
+        background: #e0f0ff;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+    .orbiting-node:nth-child(1) { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+    .orbiting-node:nth-child(2) { transform: rotate(180deg) translateX(200px) rotate(-180deg); }
+
+    @keyframes rotate {
+        from { transform: translate(-50%, -50%) rotate(0deg); }
+        to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+</style>
+
+<style>
+    .education-network {
+        position: relative;
+        margin: 4rem auto;
+        max-width: 800px;
+        padding-left: 2rem;
+        border-left: 3px dashed #ccc;
+    }
+    .edu-node {
+        position: relative;
+        margin-bottom: 3rem;
+        padding-left: 2rem;
+    }
+    .edu-node .dot {
+        position: absolute;
+        left: -1.5rem;
+        top: 0.3rem;
+        width: 16px;
+        height: 16px;
+        background: #0071e3;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #0071e3;
+        animation: pulse 2s infinite ease-in-out;
+    }
+    .edu-content {
+        background: #f9f9f9;
+        padding: 1.2rem 1.5rem;
+        border-radius: 10px;
+        transition: transform 0.4s ease, background 0.4s ease;
+    }
+    .edu-node:hover .edu-content {
+        background: #eef6ff;
+        transform: translateX(5px);
+    }
+
+    @keyframes pulse {
+        0%, 100% { box-shadow: 0 0 0 0 rgba(0,113,227, 0.5); }
+        50% { box-shadow: 0 0 0 10px rgba(0,113,227, 0); }
+    }
+</style>
+
+        <section id="contact" class="contact-section">
+  <h2 class="section-header">📬 Get In Touch</h2>
+  <div class="contact-wrapper">
+    <div class="contact-info">
+      <h3>Contact Info</h3>
+      <p><strong>Email:</strong> <a href="mailto:shivarambabloo@gmail.com">shivarambabloo@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/shivaram-emmidi" target="_blank">shivaram-emmidi</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/Shivaram0411" target="_blank">Shivaram0411</a></p>
+    </div>
+
+    <form class="contact-form" action="https://formspree.io/f/xpwropzr" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Shivaram Emmidi. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
